@@ -1,0 +1,68 @@
+.root {
+    -fx-background-color: #1a1a2e;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Current time label */
+.clock-label {
+    -fx-text-fill: #a0a0c0;
+    -fx-font-size: 16px;
+}
+
+/* Timer display */
+.timer-display {
+    -fx-text-fill: #e0e0ff;
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+}
+
+.timer-display.flash {
+    -fx-text-fill: #ff4444;
+}
+
+/* Quick-add buttons */
+.add-btn {
+    -fx-background-color: #16213e;
+    -fx-text-fill: #e0e0ff;
+    -fx-font-size: 14px;
+    -fx-padding: 8 18;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.add-btn:hover {
+    -fx-background-color: #0f3460;
+}
+
+/* Control buttons */
+.ctrl-btn {
+    -fx-font-size: 15px;
+    -fx-padding: 10 28;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.start-btn {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+.start-btn:hover {
+    -fx-background-color: #2ecc71;
+}
+
+.pause-btn {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+}
+.pause-btn:hover {
+    -fx-background-color: #f1c40f;
+}
+
+.reset-btn {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+}
+.reset-btn:hover {
+    -fx-background-color: #e74c3c;
+}
