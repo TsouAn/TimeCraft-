@@ -95,20 +95,22 @@ public class App extends Application {
         VBox timerSection = new VBox(20, clockBar, timerLabel, addBtns, ctrlBtns);
         timerSection.setAlignment(Pos.CENTER);
         timerSection.setPadding(new Insets(20));
+        VBox.setVgrow(timerSection, Priority.ALWAYS);
 
-        // --- YouTube Music panel ---
+        // --- YouTube Music button ---
         YouTubePanel ytPanel = new YouTubePanel();
-        VBox.setVgrow(ytPanel, Priority.ALWAYS);
 
         // --- Root layout ---
         VBox root = new VBox(10, timerSection, ytPanel);
         root.setPadding(new Insets(0, 0, 10, 0));
 
-        Scene scene = new Scene(root, 900, 700);
+        Scene scene = new Scene(root, 500, 420);
         scene.getStylesheets().add(
                 getClass().getResource("/style.css").toExternalForm());
 
         stage.setTitle("TimeCraft");
+        stage.setMinWidth(350);
+        stage.setMinHeight(300);
         stage.setScene(scene);
         stage.show();
     }

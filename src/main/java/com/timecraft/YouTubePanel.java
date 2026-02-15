@@ -1,25 +1,36 @@
 package com.timecraft;
 
-import javafx.scene.layout.VBox;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 
-public class YouTubePanel extends VBox {
+import java.awt.Desktop;
+import java.net.URI;
+
+public class YouTubePanel extends HBox {
 
     private static final String YOUTUBE_MUSIC_URL = "https://music.youtube.com";
 
     public YouTubePanel() {
-        WebView webView = new WebView();
-        webView.setPrefHeight(400);
-        WebEngine engine = webView.getEngine();
-        engine.setUserAgent(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) " +
-            "AppleWebKit/537.36 (KHTML, like Gecko) " +
-            "Chrome/120.0.0.0 Safari/537.36"
-        );
-        engine.load(YOUTUBE_MUSIC_URL);
+        setAlignment(Pos.CENTER);
+        setPadding(new Insets(15));
+        setSpacing(15);
 
-        getChildren().add(webView);
-        setFillWidth(true);
+        Label musicIcon = new Label("\u266B");
+        musicIcon.getStyleClass().add("music-icon");
+
+        Button openBtn = new Button("Open YouTube Music");
+        openBtn.getStyleClass().add("music-btn");
+        openBtn.setOnAction(e -> {
+            try {
+                Desktop.getDesktop().browse(new URI(YOUTUBE_MUSIC_URL));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+
+        getChildren().addAll(musicIcon, openBtn);
     }
 }

@@ -6,13 +6,13 @@
 /* Current time label */
 .clock-label {
     -fx-text-fill: #a0a0c0;
-    -fx-font-size: 16px;
+    -fx-font-size: 1.2em;
 }
 
 /* Timer display */
 .timer-display {
     -fx-text-fill: #e0e0ff;
-    -fx-font-size: 72px;
+    -fx-font-size: 4.5em;
     -fx-font-weight: bold;
 }
 
@@ -24,7 +24,7 @@
 .add-btn {
     -fx-background-color: #16213e;
     -fx-text-fill: #e0e0ff;
-    -fx-font-size: 14px;
+    -fx-font-size: 1em;
     -fx-padding: 8 18;
     -fx-background-radius: 6;
     -fx-cursor: hand;
@@ -36,7 +36,7 @@
 
 /* Control buttons */
 .ctrl-btn {
-    -fx-font-size: 15px;
+    -fx-font-size: 1.1em;
     -fx-padding: 10 28;
     -fx-background-radius: 8;
     -fx-cursor: hand;
@@ -65,4 +65,24 @@
 }
 .reset-btn:hover {
     -fx-background-color: #e74c3c;
+}
+
+/* YouTube Music button */
+.music-icon {
+    -fx-text-fill: #e0e0ff;
+    -fx-font-size: 1.8em;
+}
+
+.music-btn {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;
+    -fx-padding: 10 24;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.music-btn:hover {
+    -fx-background-color: #cc0000;
 }
